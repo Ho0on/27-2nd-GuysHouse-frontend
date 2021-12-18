@@ -11,28 +11,33 @@ export default function ManageHost() {
       .then(res => setProgramData(res));
   }, []);
 
-  console.log(programData);
-
   return (
     <ManageHostWrap>
       <ManageBox>
         <AllProgramsBox>
-          {programData &&
-            programData.map(el => {
-              return (
-                <Program
-                  key={el.id}
-                  title={el.title}
-                  detail={el.detail}
-                  address={el.address}
-                  thumbnailImg={el.thumbnailImg}
-                />
-              );
-            })}
+          <AllProgramHead>전체 남의집</AllProgramHead>
+          <ProgramList>
+            {programData &&
+              programData.map(el => {
+                return (
+                  <Program
+                    key={el.id}
+                    title={el.title}
+                    detail={el.detail}
+                    address={el.address}
+                    thumbnailImg={el.thumbnail_image}
+                  />
+                );
+              })}
+          </ProgramList>
         </AllProgramsBox>
       </ManageBox>
       <RightBox>
-        <ProfileBox>asdf</ProfileBox>
+        <ProfileBox>
+          <ProfileImgWrap>
+            <Img src="/images/logo.png" />
+          </ProfileImgWrap>
+        </ProfileBox>
       </RightBox>
     </ManageHostWrap>
   );
@@ -40,18 +45,18 @@ export default function ManageHost() {
 
 const ManageHostWrap = styled.div`
   display: flex;
-  padding: 70px;
+  padding: 50px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
+  background-color: #fbfaf8;
 `;
 
-const ManageBox = styled.section`
+const ManageBox = styled.div`
   display: flex;
-  margin-right: 50px;
+  margin-right: 30px;
 `;
 
-const RightBox = styled.section`
+const RightBox = styled.div`
   display: flex;
   width: 320px;
 `;
@@ -59,11 +64,31 @@ const RightBox = styled.section`
 const AllProgramsBox = styled.div`
   border: 1px solid #dbdbdb;
   width: 100%;
+  overflow-y: scroll;
+  position: relative;
+`;
+
+const AllProgramHead = styled.h1`
+  padding: 20px 24px;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+const ProgramList = styled.ul`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProfileBox = styled.div`
   width: 100%;
   border: 1px solid #dbdbdb;
+`;
+
+const ProfileImgWrap = styled.div`
+  width: 50px;
+  width: 50px;
+  border: 1px solid black;
 `;
 
 const Img = styled.img`

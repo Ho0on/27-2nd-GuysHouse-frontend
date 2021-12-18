@@ -150,12 +150,11 @@ const CreateHostWrap = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
   background-color: #fbfaf8;
 
   .formWrap {
     width: 70%;
-    margin: 50px 0;
+    margin: 20px 0;
 
     .inputImgBox {
       display: flex;
@@ -163,7 +162,7 @@ const CreateHostWrap = styled.div`
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 20px 20px;
+      padding: 20px;
       border: 1px solid #8e8e8e;
       border-radius: 4px;
       background-color: #f6f6f6;
@@ -173,7 +172,7 @@ const CreateHostWrap = styled.div`
 `;
 
 const HeadTitle = styled.h1`
-  padding: 50px 0 10px 0;
+  padding: 20px 0 10px 0;
   font-size: 26px;
   font-weight: ${props => props.theme.weightSemiBold};
 `;

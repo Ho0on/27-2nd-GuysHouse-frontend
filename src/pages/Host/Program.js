@@ -9,7 +9,7 @@ export default function Program({ title, detail, address, thumbnailImg }) {
       </ThumbnailImgWrap>
       <ContentBox>
         <ProgramTitle>{title}</ProgramTitle>
-        <p>{detail}</p>
+        <ProgramDescription>{detail}</ProgramDescription>
         <LocationWrap>
           <LocationTitle>장소</LocationTitle>
           <p>{address}</p>
@@ -22,6 +22,7 @@ export default function Program({ title, detail, address, thumbnailImg }) {
 const ProgramWrap = styled.li`
   display: flex;
   width: 100%;
+  padding: 30px 20px 0 20px;
 `;
 
 const ThumbnailImgWrap = styled.div`
@@ -32,21 +33,30 @@ const ThumbnailImgWrap = styled.div`
 const ThumbnailImg = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 4px;
 `;
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0px 5px 20px;
 `;
 
 const ProgramTitle = styled.h1`
-  font-size: 24px;
+  font-size: 19px;
+`;
+
+const ProgramDescription = styled.p`
+  margin: 5px 0;
+  font-size: 15px;
 `;
 
 const LocationWrap = styled.div`
   display: flex;
+  font-size: 15px;
 `;
 
 const LocationTitle = styled.p`
-  color: #dbdbdb;
-  margin-right: 30px;
+  color: gray;
+  margin-right: 20px;
 `;

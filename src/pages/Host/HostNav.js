@@ -20,7 +20,6 @@ export default function HostNav() {
 const HostSideNav = styled.div`
   width: 180px;
   height: 100vh;
-  overflow-y: auto;
   padding-top: 30px;
   font-size: 14px;
   font-weight: ${props => props.theme.weightRegular};

@@ -12,8 +12,8 @@ export default function Host() {
         <HostNav />
       </LeftNav>
       <Routes>
+        <Route path="/" element={<ManageHost />} />
         <Route path="/create" element={<CreateHost />} />
-        <Route path="/manage" element={<ManageHost />} />
       </Routes>
     </HostWrap>
   );
@@ -23,7 +23,6 @@ const HostWrap = styled.div`
   display: flex;
   max-width: 1150px;
   margin: 0 auto;
-  height: 100%;
 `;
 
 const LeftNav = styled.div`
