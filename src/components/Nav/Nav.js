@@ -38,7 +38,7 @@ export default function Nav() {
         </MenuList>
         <MenuList>
           <NavItem>
-            <i class="fas fa-search" />
+            <i className="fas fa-search" />
           </NavItem>
           {token ? (
             <NavItem onClick={LogoutKakao}> 로그아웃</NavItem>
